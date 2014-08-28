@@ -1,4 +1,7 @@
-awesome-class-names
+Awesome Class Names
 ===================
 
-Make your class names more awesome.
+Make your Ruby class names more awesome.
+
+
+

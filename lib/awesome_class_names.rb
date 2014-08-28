@@ -1,0 +1,2 @@
+module AwesomeClassNames
+end
