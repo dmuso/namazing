@@ -1,7 +1,7 @@
-Awesome Class Names
+Namazing
 ===================
 
-Make your Ruby class names more awesome.
+Name things with more awesome.
 
 
 
