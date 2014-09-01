@@ -1,4 +1,4 @@
-require File.expand_path("../lib/namazing/version", __FILE__)
+require File.expand_path("../lib/namazing/namazing", __FILE__)
 
 Gem::Specification.new do |gem|
   gem.name          = "namazing"
