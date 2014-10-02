@@ -24,7 +24,7 @@ module Namazing
   end
 
   def self.convert boring_word
-    digest = Digest::SHA256.hexdigest boring_word
+    digest = Digest::SHA256.hexdigest boring_word.downcase
     wordlist_line = (WORDLIST.size * digest[0..9].hex.to_f / ("F" * 10).hex).to_i
     WORDLIST[wordlist_line]
   end

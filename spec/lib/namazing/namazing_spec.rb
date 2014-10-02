@@ -69,6 +69,11 @@ describe Namazing do
       expect(Namazing.to_awesome("super_boring").split("_").length).to eq 2
     end
 
+    it "should give the same awesome regardless of case" do
+      first = subject
+      expect(Namazing.to_awesome("Boring").downcase).to eq(first.downcase)
+    end
+
 
   end
 
