@@ -1,5 +1,5 @@
 require 'digest'
-require './lib/namazing/wordup.rb'
+require_relative 'wordup'
 
 module Namazing
 
@@ -7,7 +7,7 @@ module Namazing
   WORDLIST_SIZE = WORDLIST.size
 
   def self.version
-    "0.0.2"
+    "0.0.3"
   end
 
   def self.random

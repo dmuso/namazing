@@ -1,4 +1,4 @@
-require './lib/namazing/namazing.rb'
+require 'namazing/namazing'
 
 module Namazing
 end
