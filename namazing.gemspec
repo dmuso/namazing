@@ -9,6 +9,7 @@ Gem::Specification.new do |gem|
   gem.homepage      = "https://github.com/dmuso/namazing"
 
   gem.add_runtime_dependency 'activesupport'
+  gem.add_runtime_dependency 'digest'
 
   gem.files         = `git ls-files`.split($/)
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
