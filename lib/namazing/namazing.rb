@@ -1,4 +1,5 @@
 require 'digest'
+require './lib/namazing/wordup.rb'
 
 module Namazing
 
@@ -15,7 +16,15 @@ module Namazing
   end
 
   def self.to_awesome boring
-    digest = Digest::SHA256.hexdigest boring
+    wordup = Wordup.new boring
+    wordup.split.each do |word|
+      wordup.awesomes << Namazing.convert(word)
+    end
+    wordup.awesome
+  end
+
+  def self.convert boring_word
+    digest = Digest::SHA256.hexdigest boring_word
     wordlist_line = (WORDLIST.size * digest[0..9].hex.to_f / ("F" * 10).hex).to_i
     WORDLIST[wordlist_line]
   end

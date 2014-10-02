@@ -25,9 +25,9 @@ describe Namazing do
 
   end
 
-  describe "#to_awesome" do
+  describe "#convert" do
 
-    subject { Namazing.to_awesome "boring" }
+    subject { Namazing.convert "boring" }
 
     it "should be a string" do
       expect(subject).to be_a_kind_of(String)
@@ -48,8 +48,27 @@ describe Namazing do
 
     it "should return a different awesome with a different boring" do
       first = subject
-      expect(Namazing.to_awesome "slightlyboring").not_to eq (first)
+      expect(Namazing.convert "slightlyboring").not_to eq (first)
     end
+
+  end
+
+  describe "#to_awesome" do
+
+    subject { Namazing.to_awesome "boring" }
+
+    it "should be a string" do
+      expect(subject).to be_a_kind_of(String)
+    end
+
+    it "should not be boring" do
+      expect(subject).not_to eq("boring")
+    end
+
+    it "should return a multiword awesome if given a multiword boring" do
+      expect(Namazing.to_awesome("super_boring").split("_").length).to eq 2
+    end
+
 
   end
 
