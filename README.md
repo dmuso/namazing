@@ -19,11 +19,11 @@ There are two main use cases for Namazing:
 
 1. Generating a random awesome word:
 
-    Namazing.random
+        Namazing.random
 
 2. Making an existing word or string awesome:
 
-    Namazing.to_awesome "boring_word"
+        Namazing.to_awesome "boring_word"
 
 
 ## Persistance
