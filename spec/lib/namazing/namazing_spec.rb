@@ -20,7 +20,7 @@ describe Namazing do
 
     it "should provide a random word" do
       srand(10)
-      expect(subject).to eq("netminders")
+      expect(subject).to eq("prevocalic")
     end
 
   end
