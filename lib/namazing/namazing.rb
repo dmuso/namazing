@@ -3,11 +3,11 @@ require_relative 'wordup'
 
 module Namazing
 
-  WORDLIST = File.open(File.expand_path("../word_list_filtered.txt", __FILE__)).readlines.collect { |l| l.chomp! }
+  WORDLIST = File.open(File.expand_path('../word_list_filtered.txt', __FILE__)).readlines.collect { |l| l.chomp! }
   WORDLIST_SIZE = WORDLIST.size
 
   def self.version
-    "0.0.3"
+    "0.0.4"
   end
 
   def self.random
@@ -25,8 +25,7 @@ module Namazing
 
   def self.convert boring_word
     digest = Digest::SHA256.hexdigest boring_word.downcase
-    wordlist_line = (WORDLIST.size * digest[0..9].hex.to_f / ("F" * 10).hex).to_i
+    wordlist_line = (WORDLIST.size * digest[0..9].hex.to_f / ('F' * 10).hex).to_i
     WORDLIST[wordlist_line]
   end
-
 end

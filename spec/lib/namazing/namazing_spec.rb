@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe Namazing do
-
   describe "#random" do
 
     subject { Namazing.random }
@@ -22,11 +21,9 @@ describe Namazing do
       srand(10)
       expect(subject).to eq("prevocalic")
     end
-
   end
 
   describe "#convert" do
-
     subject { Namazing.convert "boring" }
 
     it "should be a string" do
@@ -50,11 +47,9 @@ describe Namazing do
       first = subject
       expect(Namazing.convert "slightlyboring").not_to eq (first)
     end
-
   end
 
   describe "#to_awesome" do
-
     subject { Namazing.to_awesome "boring" }
 
     it "should be a string" do
@@ -73,8 +68,5 @@ describe Namazing do
       first = subject
       expect(Namazing.to_awesome("Boring").downcase).to eq(first.downcase)
     end
-
-
   end
-
 end
